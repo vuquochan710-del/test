@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Là Triệu Mixi - Check Var Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="startScreen">
+    <img src="logo.png" alt="Logo" class="game-logo">
+    <button onclick="showStory()">START</button>
+</div>
+
+<div id="storyScreen" class="hidden">
+    <div class="story-box">
+        <div id="storyText"></div>
+        <button onclick="startGame()" id="skipBtn" class="hidden">VÀO VIỆC ĐI VŨ! 🚀</button>
+    </div>
+</div>
+
+<div id="game" class="hidden">
+    <div class="timer-mini">⏳ <span id="timeLeft">30</span>s</div>
+
+    <div class="top-bar">
+        <div class="lifelines">
+            <button onclick="fiftyFifty()">🍋 Vắt chanh</button>
+            <button onclick="callExpert()">📞 Gọi anh Độ Mixi</button>
+            <button onclick="callFriend()">☎️ Gọi cho Vũ</button>
+        </div>
+    </div>
+
+    <div class="stage">
+        <img src="stage.jpg" class="stage-bg">
+        <img src="player.png" class="player">
+    </div>
+
+    <div class="question-area">
+        <div id="question" class="diamond-shape"></div>
+        <div class="answers">
+            <button onclick="selectAnswer(0)" id="a0" class="diamond-shape"></button>
+            <button onclick="selectAnswer(1)" id="a1" class="diamond-shape"></button>
+            <button onclick="selectAnswer(2)" id="a2" class="diamond-shape"></button>
+            <button onclick="selectAnswer(3)" id="a3" class="diamond-shape"></button>
+        </div>
+    </div>
+
+    <div class="ladder">
+        <ul id="ladderList"></ul>
+    </div>
+</div>
+
+<audio id="sndStart" src="start.mp3" loop></audio>
+<audio id="sndCorrect1" src="correct1.mp3"></audio>
+<audio id="sndCorrect2" src="correct2.mp3"></audio>
+<audio id="sndCorrect3" src="correct3.mp3"></audio>
+<audio id="sndWrong" src="wrong.mp3"></audio>
+<audio id="sndEnd" src="end.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
